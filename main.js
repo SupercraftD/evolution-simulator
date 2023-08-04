@@ -47,7 +47,7 @@ function genRandomGenes(){
   let b = r
  */
 
-  let inputs = ['d(distanced)0','c(1)1','c(1)2','c(1)3','c(1)4','c(1)5'/*,'d(distanceToPoint)6'*/,'d(getTime)6']
+  let inputs = ['d(distanced)0','c(1)1','c(1)2','c(1)3','c(1)4','c(1)5'/*,'d(distanceToPoint)6','d(getTime)6'*/]
   let inter = ['r(-5,5)F:i1;i2;i3;i4','r(0,1)F:m0','r(0,1)F:m1','r(0,1)F:m2','r(0,1)F:m3','r(0,1)F:m4','r(0,1)F:m0;m1;m2;m3']
   for (let x=0;x<inter.length;x++){
     i=inter[x]
@@ -142,7 +142,7 @@ function endRound(){
 
   criteriaMet=0
   let survivalCriteria = (agent) =>{
-    return agent.speed>20//&&(!agent.flaggedForDeath)
+    return agent.x>WIDTH-10
   }
 
   let metAgents = []
