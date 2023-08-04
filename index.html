@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/p5.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <h1 id='paused' style="color:red">PAUSED</h1>
+    <h1 id="gen"></h1>
+    <p id="agentcount"></p>
+    <p><i id='criteriamet'></i></p>
+    <button onclick="reset()">Reset</button>
+    <button id='manualgen' onclick="manualNewGen()">Next Gen</button>
+    <div id="genMode">
+      <input type="radio" name="genMode" value="Manual" id="manual" checked="true">
+      <label for="manual">Manual</label>
+      <input type="radio" name="genMode" value="Auto" id="auto">
+      <label for="auto">Auto</label>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/p5.collide2d"></script>
+    <script src="/agent.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
