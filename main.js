@@ -135,15 +135,15 @@ let criteriaMet=0
 
 let enforceAgentCount=true
 
+let survivalCriteria = (agent) =>{
+  return agent.x>WIDTH-10
+}
 
 function endRound(){
   time=0
   let colorsMet={}
 
   criteriaMet=0
-  let survivalCriteria = (agent) =>{
-    return agent.x>WIDTH-10
-  }
 
   let metAgents = []
   for (let agent of agents){
